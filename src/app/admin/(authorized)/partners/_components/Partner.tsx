@@ -11,7 +11,7 @@ const Partner = ({
   onDelete: Function;
 }) => {
   return (
-    <div className="bg-white text-adminText flex flex-col gap-2 w-[300px] px-2 py-2 shadow">
+    <div className="bg-white rounded-xl text-adminText flex flex-col gap-2 w-[300px] px-2 py-2 shadow">
       <Image
         src={partner.image}
         className="w-[300px] h-[200px] object-cover "

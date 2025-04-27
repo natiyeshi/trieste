@@ -43,7 +43,7 @@ const Partners = ({ initialPartners }: Props) => {
         <div className="text-2xl font-black">Partners</div>
         <AddPartner setPartners={setPartners} />
       </div>
-      <div className=" text-adminText capitalize">Available testimonies</div>
+      <div className=" text-adminText capitalize">Available Partners</div>
       <div className="grid grid-cols-3 mt-8 gap-5 ">
         {partners.map((partner) => (
           <Partner

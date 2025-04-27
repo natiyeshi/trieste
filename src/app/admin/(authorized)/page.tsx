@@ -6,8 +6,6 @@ const Pay = () => {
     <div className="w-full  relative px-6 pt-2 h-full overflow-auto">
       <AdminNav />
       <Section1 />
-      {/* <div className="w-60 h-60 bg-orange-600 blur-[250px] absolute left-32 top-20  z-0 "></div> */}
-      {/* <div className="w-60 h-60 bg-green-600 blur-[250px] absolute right-20 top-52  z-0 "></div> */}
       <div className="flex flex-col mt-8">
         <div className="text-2xl font-black">Recent status</div>
         <div className=" text-adminText mt-1">

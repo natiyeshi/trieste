@@ -40,23 +40,33 @@ const ReadMessage = ({ data }: { data: IMessage }) => {
           <AlertDialogDescription className="flex flex-col gap-4 pt-5">
             <div>
               {formatDate(
-                data.createdAt
-                  ? new Date(data.createdAt)
-                  : new Date(Date.now())
+                data.createdAt ? new Date(data.createdAt) : new Date(Date.now())
               )}
             </div>
             <div className="flex flex-col gap-2">
               <div>Name</div>
-              <div className="font-semibold text-black break-all">{data.name}</div>
+              <div className="font-semibold text-black break-all">
+                {data.name}
+              </div>
             </div>
 
             <div className="flex flex-col gap-2">
               <div>Email</div>
-              <div className="font-semibold text-black break-all">{data.email}</div>
+              <div className="font-semibold text-black break-all">
+                {data.email}
+              </div>
+            </div>
+            <div className="flex flex-col gap-2">
+              <div>Phone Number</div>
+              <div className="font-semibold text-black break-all">
+                {data.phoneNumber}
+              </div>
             </div>
             <div className="flex flex-col gap-2">
               <div>Message</div>
-              <div className="font-semibold text-black break-all">{data.message}</div>
+              <div className="font-semibold text-black break-all">
+                {data.message}
+              </div>
             </div>
           </AlertDialogDescription>
         </AlertDialogHeader>

@@ -7,6 +7,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 import { LuBuilding2 } from "react-icons/lu";
 import { AiFillProduct } from "react-icons/ai";
 import { usePathname } from "next/navigation";
+import { FaBloggerB } from "react-icons/fa6";
 export interface Props {
   name: string;
   link: string;
@@ -20,8 +21,8 @@ const links: Props[] = [
     Icon: BiHome,
   },
   {
-    name: "Service",
-    link: "/admin/service",
+    name: "Projects",
+    link: "/admin/projects",
     Icon: MdHomeRepairService,
   },
   {
@@ -34,11 +35,16 @@ const links: Props[] = [
     link: "/admin/partners",
     Icon: FaPeopleGroup,
   },
+  // {
+  //   name: "Supplier",
+  //   link: "/admin/supplier",
+  //   Icon: LuBuilding2, // Updated to supplier icon
+  // },
   {
     name: "Testimonials",
     link: "/admin/testimonials",
-    Icon: LuBuilding2,
-  }
+    Icon: AiFillProduct, // Changed to testminoy icon
+  },
 ];
 
 export default function AdminLinks() {

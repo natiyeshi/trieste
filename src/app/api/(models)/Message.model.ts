@@ -7,13 +7,20 @@ mongoose.Promise = global.Promise
 const messageSchema = new Schema({
     name : {
         type: String,
-        required: false,
+        required: true,
     },
     email : {
         type: String,
-        required: false,
+        required: true,
     },
-    message : String,
+    phoneNumber : {
+        type: String,
+        required: true,
+    },
+    message : {
+        type: String,
+        required: true,
+    },
 },{
     timestamps : true,
 })
