@@ -45,8 +45,8 @@ export function AboutUs() {
               Trieste Construction Chemicals & Waterproofing PLC (TCCW) is a
               private limited company established in 2014 and headquartered in
               Addis Ababa, Ethiopia. Built on a foundation of professionalism,
-              ethics, and quality, TCCW operates under the philosophy, "High
-              Performance Waterproofing Solutions for the Best Results."
+              ethics, and quality, TCCW operates under the philosophy, &quot;High
+              Performance Waterproofing Solutions for the Best Results.&quot;
             </p>
             <p className="text-gray-600 mb-8">
               With a commitment to excellence, we provide a wide range of

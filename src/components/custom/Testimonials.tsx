@@ -31,7 +31,7 @@ export default function Testimonials() {
       <div className=" overflow-hidden mt-12" ref={emblaRef}>
         <div className="flex h-full gap-4 ">
           {[...Array(10)].map((b, key) => (
-            <Testimonial />
+            <Testimonial key={key} />
           ))}
         </div>
       </div>
