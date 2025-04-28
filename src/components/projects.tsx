@@ -32,12 +32,13 @@ export function Projects() {
     const fetchProjects = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_URL}/api/product/`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/project/`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch projects");
         }
         const data: IProject[] = await response.json();
+        console.log(data,"Projects")
         setProjects(data);
       } catch (error) {
         console.error("Error fetching projects:", error);
