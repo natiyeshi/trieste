@@ -9,6 +9,7 @@ import { StyledHighlight } from "@/components/styled-hightlight";
 import { Building, Warehouse, Factory, Home } from "lucide-react";
 import { useState, useEffect } from "react";
 import { IProject } from "@/interfaces/project.interface";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function ProjectsPage() {
   const [projects, setProjects] = useState<IProject[]>([]);
@@ -101,36 +102,45 @@ export default function ProjectsPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects
-                .filter((project) => project.isFeatured)
-                .map((project, index) => (
-                  <Card
-                    key={index}
-                    className="overflow-hidden border-none shadow-md"
-                  >
-                    <div className="relative h-48 w-full">
-                      <Image
-                        src={project.image}
-                        fill
-                        unoptimized
-                        className="object-cover"
-                        alt={"image"}
-                      />
-                    </div>
-                    <CardContent className="p-4">
-                      <h3 className="font-bold text-lg mb-2">{project.name}</h3>
-                      <p className="text-gray-600 mb-2">{project.desc}</p>
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {/* <span className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                      {project.category}
-                    </span>
-                    <span className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded">
-                      {project.location}
-                    </span> */}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
+              {loading
+                ? Array.from({ length: 6 }).map((_, index) => (
+                    <Card
+                      key={index}
+                      className="overflow-hidden border-none shadow-md"
+                    >
+                      <Skeleton className="h-48 w-full" />
+                      <CardContent className="p-4">
+                        <Skeleton className="h-6 w-3/4 mb-2" />
+                        <Skeleton className="h-4 w-full mb-2" />
+                        <Skeleton className="h-4 w-1/2" />
+                      </CardContent>
+                    </Card>
+                  ))
+                : projects
+                    .filter((project) => project.isFeatured)
+                    .map((project, index) => (
+                      <Card
+                        key={index}
+                        className="overflow-hidden border-none shadow-md"
+                      >
+                        <div className="relative h-48 w-full">
+                          <Image
+                            src={project.image}
+                            fill
+                            unoptimized
+                            className="object-cover"
+                            alt={"image"}
+                          />
+                        </div>
+                        <CardContent className="p-4">
+                          <h3 className="font-bold text-lg mb-2">
+                            {project.name}
+                          </h3>
+                          <p className="text-gray-600 mb-2">{project.desc}</p>
+                          <div className="flex flex-wrap gap-2 mt-4"></div>
+                        </CardContent>
+                      </Card>
+                    ))}
             </div>
           </div>
         </section>
